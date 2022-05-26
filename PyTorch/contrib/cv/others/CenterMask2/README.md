@@ -23,6 +23,7 @@ cd models/detectron2
 python setup.py build develop
 pip install -e .
 cd ..
+//5. 确认在models\centermask2\configs\centermask当中有预训练权重文件vovnet39_ese_detectron2.pth
 ```
 
 ## Training
