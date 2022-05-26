@@ -24,6 +24,7 @@ python setup.py build develop
 pip install -e .
 cd ..
 //5. 确认在models\centermask2\configs\centermask当中有预训练权重文件vovnet39_ese_detectron2.pth
+//权重文件下载地址： https://dl.dropbox.com/s/q98pypf96rhtd8y/vovnet39_ese_detectron2.pth 
 ```
 
 ## Training
