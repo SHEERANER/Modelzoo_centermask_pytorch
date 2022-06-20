@@ -80,7 +80,7 @@ if [ x"${etp_flag}" != x"true" ];then
     source ${test_path_dir}/env_npu.sh
     source ${test_path_dir}/set_env.sh
 fi
-python ./models/centermask2/train_net.py \
+python3.7  ./models/centermask2/train_net.py \
     --config-file ./models/centermask2/configs/centermask/zsclzy_model_config_amp.yaml \
     --device-ids 0 \
         --num-gpus 1\

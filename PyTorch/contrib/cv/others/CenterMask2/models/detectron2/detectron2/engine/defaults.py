@@ -337,7 +337,7 @@ class DefaultTrainer(SimpleTrainer):
                 loss_scale=cfg.LOSS_SCALE_VALUE)
         
         # add vovnet hook 
-        hook_for_model(model) # add hook print
+        # hook_for_model(model) # add hook print
 
         data_loader = self.build_train_loader(cfg)
 

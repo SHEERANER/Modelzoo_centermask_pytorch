@@ -77,13 +77,14 @@ if [ x"${etp_flag}" != x"true" ];then
     source ${test_path_dir}/env_npu.sh
     source ${test_path_dir}/set_env.sh
 fi
-python ./models/centermask2/train_net.py \
+python3.7  ./models/centermask2/train_net.py \
     --config-file ./models/centermask2/configs/centermask/zsclzy_model_config_amp.yaml \
     --device-ids 0 1 2 3 4 5 6 7 \
     --num-gpus 8 \
     --eval-only \
     MODEL.WEIGHTS $pth_path\
         SOLVER.MAX_ITER 4000\
+        SOLVER.IMS_PER_BATCH 32\
         SOLVER.BASE_LR 0.01\
         SOLVER.CHECKPOINT_PERIOD 3700\
         OPT_LEVEL O1\
