@@ -25,6 +25,7 @@ pip install -e .
 cd ..
 //5. 确认在models\centermask2\configs\centermask当中有预训练权重文件vovnet39_ese_detectron2.pth
 //权重文件下载地址： https://dl.dropbox.com/s/q98pypf96rhtd8y/vovnet39_ese_detectron2.pth 
+//在运行模型的过程中如果访问到模型权重文件，请将models\centermask2\configs\centermask\zsclzy_model_config_amp.yaml 文件中的MODELS\WEGHTS中的路径修改为绝对路径
 ```
 
 ## Training
