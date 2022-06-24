@@ -62,7 +62,7 @@ python3.7 ./models/centermask2/train_net.py \
     --config-file ./models/centermask2/configs/centermask/zsclzy_model_config_amp.yaml \
         --device-ids 0 1 2 3 4 5 6 7\
         --num-gpus 8\
-        SOLVER.IMS_PER_BATCH 32\
+        SOLVER.IMS_PER_BATCH $batch_size\
         SOLVER.MAX_ITER 4000 \
         SOLVER.BASE_LR 0.01 \
         SOLVER.CHECKPOINT_PERIOD 3700 \

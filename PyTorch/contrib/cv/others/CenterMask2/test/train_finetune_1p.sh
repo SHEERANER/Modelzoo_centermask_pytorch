@@ -82,14 +82,13 @@ if [ x"${etp_flag}" != x"true" ];then
 fi
 python3.7  ./models/centermask2/train_net.py \
     --config-file ./models/centermask2/configs/centermask/zsclzy_model_config_amp.yaml \
-    --device-ids 0 \
         --num-gpus 1\
-        SOLVER.IMS_PER_BATCH 2\
+        SOLVER.IMS_PER_BATCH $batch_size\
         SOLVER.BASE_LR 0.0001 \
         SOLVER.MAX_ITER 4000 \
         SOLVER.CHECKPOINT_PERIOD 3700\
         OPT_LEVEL O2\
-        LOSS_SCALE_VALUE 128> ${test_path_dir}/output/${ASCEND_DEVICE_ID}/train_${ASCEND_DEVICE_ID}.log 2>&1 &
+        LOSS_SCALE_VALUE 128 > ${test_path_dir}/output/${ASCEND_DEVICE_ID}/train_${ASCEND_DEVICE_ID}.log 2>&1 &
 wait
 
 
