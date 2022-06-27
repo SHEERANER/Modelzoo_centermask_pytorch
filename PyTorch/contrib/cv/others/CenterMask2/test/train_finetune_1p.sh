@@ -87,8 +87,8 @@ python3.7  ./models/centermask2/train_net.py \
         SOLVER.BASE_LR 0.0001 \
         SOLVER.MAX_ITER 4000 \
         SOLVER.CHECKPOINT_PERIOD 3700\
-        OPT_LEVEL O2\
-        LOSS_SCALE_VALUE 128 > ${test_path_dir}/output/${ASCEND_DEVICE_ID}/train_${ASCEND_DEVICE_ID}.log 2>&1 &
+        OPT_LEVEL O1\
+        LOSS_SCALE_VALUE None > ${test_path_dir}/output/${ASCEND_DEVICE_ID}/train_${ASCEND_DEVICE_ID}.log 2>&1 &
 wait
 
 
